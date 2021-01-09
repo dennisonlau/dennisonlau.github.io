@@ -1,0 +1,126 @@
+/* Predefined Style */
+.jumbotron {
+    padding-top: 5rem;
+    padding-bottom: 0rem;
+    margin-bottom: 0;
+    background-color: #fff;
+  }
+  @media (min-width: 768px) {
+    .jumbotron {
+      padding-top: 5rem;
+      padding-bottom: 0rem;
+    }
+  }
+  
+  .jumbotron p:last-child {
+    margin-bottom: 0;
+  }
+  
+  .jumbotron h1 {
+    font-weight: 300;
+  }
+  
+  .jumbotron .container {
+    max-width: 40rem;
+  }
+  
+  footer {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+  
+  footer p {
+    margin-bottom: .25rem;
+  }
+
+/* Custom Style */
+
+#body {
+    font-family: 'Montserrat';
+}
+
+h2 {
+    font-family: 'Montserrat';
+    line-height: 1.5;
+}
+
+#header {
+    background-color: #a5dac6;
+    font-family: 'Montserrat';
+}
+
+.navbarbg {
+    background-color: #d2dad7;
+}
+
+.navbarbg2 {
+  background-color: #d2dad7;
+}
+
+.container-fluid{
+    padding: 1% 0%;
+}
+
+#footer {
+    background-color: #d2dad7;
+    text-align: center;
+}
+
+.social-icon{
+    margin: 20px 10px;
+}
+
+.card-img-top {
+    width: 100%;
+    /* height: 15vw; */
+    object-fit: cover;
+  }
+
+  .contact {
+      /* padding: 0% 0%; */
+  }
+
+  .feature-box {
+    text-align: center;
+    padding:5% 0%;
+}
+
+  /*
+   * Extra utilities
+   */
+  
+   .flex-equal > * {
+    -ms-flex: 1;
+    flex: 1;
+  }
+  @media (min-width: 768px) {
+    .flex-md-equal > * {
+      -ms-flex: 1;
+      flex: 1;
+    }
+  }
+  
+  .overflow-hidden { overflow: hidden; }
+
+  /* Programming Skills Section */
+
+  .skill-container {
+    width: 100%;
+    background-color: #ddd;
+    position: relative;
+    margin-bottom: 15px;
+  }
+
+  .skills {
+    text-align: right; /* Right-align text */
+    padding-top: 5px; /* Add top padding */
+    padding-bottom: 5px; /* Add bottom padding */
+    color: white; /* White text color */
+  }
+
+.c {width: 90%; background-color: #999999;} /* Green */
+.cplusplus {width: 90%; background-color: #999999;} /* Blue */
+.python {width: 70%; background-color: #999999;} /* Red */
+.matlab {width: 80%; background-color: #999999;} /* Dark Grey */
+.sv {width: 60%; background-color: #999999;}
+.html {width: 40%; background-color: #999999;}

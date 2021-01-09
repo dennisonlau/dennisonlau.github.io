@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v4.1.1">
+    <title>Album example · Bootstrap</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/album/">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Ubuntu&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <!-- Bootstrap Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/edf72b0509.js" crossorigin="anonymous"></script>
+
+    <!-- Favicons -->
+<link rel="apple-touch-icon" href="/docs/4.5/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/docs/4.5/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/docs/4.5/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/docs/4.5/assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="/docs/4.5/assets/img/favicons/safari-pinned-tab.svg" color="#563d7c">
+<link rel="icon" href="/docs/4.5/assets/img/favicons/favicon.ico">
+<meta name="msapplication-config" content="/docs/4.5/assets/img/favicons/browserconfig.xml">
+<meta name="theme-color" content="#563d7c">
+
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="css/project_styles.css" rel="stylesheet">
+  </head>
+  <body>
+    <header id="header">
+  <div class="collapse customFont " id="navbarHeader">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-8 col-md-7 py-4">
+          <h4 class="text-muted">About</h4>
+          <p class="text-muted">This site documents the projects that I have undertaken in the recent years.</p>
+        </div>
+        <div class="col-sm-4 offset-md-1 py-4">
+          <ul class="list-unstyled">
+            <li><a href="index.html" class="text-white"><h5>Home</h5></a></li>
+            <li><a href="aboutme.html" class="text-white"><h5>About Me</h5></a></li>
+            <li><a href="#" class="text-white"><h5>MyBlog</h5></a></li>
+            <li><a href="#footer" class="text-white"><h5>Contact</h5></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="navbar navbar-light navbarbg shadow-sm customFont">
+    <div class="container d-flex justify-content-between container-fluid">
+      <a href="index.html" class="navbar-brand d-flex align-items-center">
+        <!-- <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" aria-hidden="true" class="mr-2" viewBox="0 0 24 24" focusable="false"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg> -->
+        Denn &#x1F916
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main role="main">
+
+  <section class="jumbotron text-center customFont">
+    <div class="container">
+      <h1>Projects</h1>
+    </div>
+  </section>
+
+  <div class="album py-5 customFont">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm bg-light text-center">
+            <img class="bd-placeholder-img img-fluid card-img-top" src="image/full_layout_draw.png" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/></img>
+            <div class="card-body">
+              <h5 class="card-title">0.18um CMOS Touchscreen Front-End<br/>(Single pixel)</h5>
+              <br>
+              <small class="text-muted">Dec 2020</small>
+              <div class=" justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#cmostouchscreen">View</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" id="cmostouchscreen" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLongTitle">0.18 um CMOS Touchscreen Front-End</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body bg-light text-justify">
+                    <img class="img-fluid" src="image/system_architecture.png" style="margin-bottom: 30px;">
+                    &nbsp;
+                    <p>In this project, I have designed a mixed signal system which can detect a change in capacitance from 1pF to 5pF in 0.18um CMOS technology. The image above shown that the system architecture comprises of two main blocks, the relaxtion oscillator which modulates the change in capacitance into frequency while the time-to-digital block converts the frequency of the wave into digital bits.</p>
+                    <img class="img-fluid " src="image/relaxation_osc_schematic.png" style="margin-top: 30px;margin-bottom: 30px;">
+                    <p> A simplified schematic version of the relaxation oscillator. The layout of the entire system is drawn using Cadence and is shown below.</p>
+                    <img class="img-fluid " src="image/full_layout_draw.png" style="margin-top: 30px;">
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm bg-light text-center">
+            <img class="bd-placeholder-img img-fluid card-img-top" src="image/myblog.png" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/></img>
+            <div class="card-body">
+              <h5 class="card-title">My Personal Website</h5>
+              <br>
+              <br>
+              <br>
+              <small class="text-muted">Sep 2020</small>
+              <div class=" justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#mypersonalwebsite">View</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" id="mypersonalwebsite" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLongTitle">My Personal Website</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body bg-light text-justify">
+                    <img class="img-fluid modalimg" src="image/myblog.png">
+                    <p>This is a webpage built using Bootstrap 4 and Javascript. I always wanted to build my own webpage and the lockdown caused by Covid-19 has given me the chance to learn about web development and to create my very own website. The source code can be found on my github page.</p>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm bg-light text-center">
+            <img class="bd-placeholder-img img-fluid card-img-top" src="image/fyp.png" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/></img>
+            <div class="card-body">
+              <h5 class="card-title">All-Terrain Robotic Research Platform</h5>
+              <br>
+              <br>
+              <small class="text-muted">May 2020</small>
+              <div class=" justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#fyp">View</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" id="fyp" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLongTitle">All-Terrain Robotic Research Platform</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body bg-light text-justify">
+                    <img class="img-fluid modalimg" src="image/fyp.png">
+                    <p>This is my final year project at University of Southampton, under the supervision of Dr Klaus Peter Zauner. The aim of this project is to create a general off-road robotic platform based on Raspberry Pi 4 and Pixhawk 4 autopilot system that can be used for research purposes such as carrying payload/payloads. The final designed rover comes equiped with a Raspberry Pi 4 and a Pixhawk 4. The developed platform is capable of being controlled by an RC transmitter as well as by the on-board computer.  It also offers multiple sensing capabilities such as individual motor current sensing,  low  battery  voltage  sensing,  and temperature  sensing. One  key  aspect that makes this platform different from other commercially available robotic platform  is  the  design  of  the  payload  interface  which  makes  it  easy  for  the  user  to integrate  sensors  or  payloads  into  the  platform. </p>
+                    <img class="img-fluid " src="image/highlevelsystemoverview.png" style="margin-top: 30px;margin-bottom: 30px;">
+                    <p>This project involved the design and implementation of the entire hardware and software system architecture. The hardware itself is divided into two level, low-level hardware(pyboard) in which the control of the motor drivers and onboard sensors interfacing is done and high-level hardware (Raspberry Pi 4) in which the user can program. ROS Melodic is implemented on the Raspberry Pi 4 to faciliate the communication and data transfer between the Pyboard and the Pixhawk 4. A high level block diagram of the entire developed and implemented hardware system architecture is shown above and a more detailed version of it is shown below.</p>
+                    <img class="img-fluid " src="image/hardwareblockdiagram (5).png" style="margin-top: 30px; margin-bottom: 30px;">
+                    <img class="img-fluid " src="image/software_architecture.png" style="margin-top: 30px; margin-bottom: 30px;">
+                    <img class="img-fluid " src="image/electronic_box_1.jpg" style="margin-top: 30px; margin-bottom: 30px;">
+                    <img class="img-fluid " src="image/final_design_1.jpg" style="margin-top: 30px; margin-bottom: 30px;">
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm bg-light text-center">
+            <img class="bd-placeholder-img img-fluid card-img-top" src="image/fmcwradar.png" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/></img>
+            <div class="card-body">
+              <h5 class="card-title">FMCW Radar for Mobile Robot</h5>
+              <br>
+              <br>
+              <small class="text-muted">May 2020</small>
+              <div class=" justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary" data-toggle="modal" data-target="#fmcw">View</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal fade" id="fmcw" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLongTitle">FMCW Radar for Mobile Robot</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body bg-light text-justify">
+                    <img class="img-fluid modalimg" src="image/fmcwradar.png">
+                    <p>The aim of this project is to discover the working principle of a FMCW radar and design the transmitter and receiver of the system. This project is solely based on simulation and is done using LTSpice. The designed system architecture is shown in the image above.</p>
+                    <img class="img-fluid " src="image/full_demodulator_cir.PNG" style="margin-top: 30px; margin-bottom: 30px;">
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Coming Soon"><title>Coming Soon</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Coming Soon</text></svg>
+            <div class="card-body">
+              <br>
+              <p class="card-text"></p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Coming Soon"><title>Coming Soon</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Coming Soon</text></svg>
+            <div class="card-body">
+              <br>
+              <p class="card-text"></p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Coming Soon"><title>Coming Soon</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Coming Soon</text></svg>
+            <div class="card-body">
+              <br>
+              <p class="card-text"></p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Coming Soon"><title>Coming Soon</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Coming Soon</text></svg>
+            <div class="card-body">
+              <br>
+              <p class="card-text"></p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm">
+            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Coming Soon"><title>Coming Soon</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Coming Soon</text></svg>
+            <div class="card-body">
+              <br>
+              <p class="card-text"></p>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+</main>
+
+<footer class="text-muted" id="footer">
+    <a href="https://twitter.com/DennisonLau"><i class="social-icon btn btn-light fab fa-twitter"></i></a>
+    <a href="https://www.linkedin.com/in/dennison-lau-847967b1"><i class="social-icon btn btn-light fab fa-linkedin"></i></a>
+    <a href="https://github.com/dennisonlau"><i class="social-icon btn btn-light fab fa-github"></i></a>
+    <a href="mailto:laudennison@hotmail.com"><i class="social-icon btn btn-light fas fa-envelope"></i></a>
+    <p> © Designed by Dennison Lau</p>
+    <div class="container">
+    <p class="float-right">
+        <a href="#">Back to top</a>
+    </p>
+    </div>
+</footer>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+      <script>window.jQuery || document.write('<script src="/docs/4.5/assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="/docs/4.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-LtrjvnR4Twt/qOuYxE721u19sVFLVSA4hf/rRt6PrZTmiPltdZcI7q7PXQBYTKyf" crossorigin="anonymous"></script></body>
+</html>
