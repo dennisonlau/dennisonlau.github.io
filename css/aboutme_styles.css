@@ -118,8 +118,8 @@ h2 {
     color: white; /* White text color */
   }
 
-.c {width: 90%; background-color: #999999;} /* Green */
-.cplusplus {width: 90%; background-color: #999999;} /* Blue */
+.c {width: 80%; background-color: #999999;} /* Green */
+.cplusplus {width: 80%; background-color: #999999;} /* Blue */
 .python {width: 60%; background-color: #999999;} /* Red */
 .matlab {width: 60%; background-color: #999999;} /* Dark Grey */
 .sv {width: 70%; background-color: #999999;}
