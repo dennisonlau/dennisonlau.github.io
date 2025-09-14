@@ -12,15 +12,17 @@
     <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/album/">
 
     <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Ubuntu&display=swap" rel="stylesheet">
 
     <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 
     <!-- Bootstrap Scripts -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 
     <!-- Font Awesome -->
     <script src="https://kit.fontawesome.com/edf72b0509.js" crossorigin="anonymous"></script>
@@ -123,12 +125,12 @@
                   </button>
                 </div>
                 <div class="modal-body bg-light text-justify">
-                    <img class="img-fluid" src="image/system_architecture.png" style="margin-bottom: 30px;">
+                    <img class="img-fluid" src="image/system_architecture.png" style="margin-bottom: 30px;" loading="lazy">
                     &nbsp;
                     <p>In this project, I have designed a mixed signal system which can detect a change in capacitance from 1pF to 5pF in 0.18um CMOS technology. The image above shown that the system architecture comprises of two main blocks, the relaxtion oscillator which modulates the change in capacitance into frequency while the time-to-digital block converts the frequency of the wave into digital bits.</p>
-                    <img class="img-fluid " src="image/relaxation_osc_schematic.png" style="margin-top: 30px;margin-bottom: 30px;">
+                    <img class="img-fluid " src="image/relaxation_osc_schematic.png" style="margin-top: 30px;margin-bottom: 30px;" loading="lazy">
                     <p> A simplified schematic version of the relaxation oscillator. The layout of the entire system is drawn using Cadence and is shown below.</p>
-                    <img class="img-fluid " src="image/full_layout_draw.png" style="margin-top: 30px;">
+                    <img class="img-fluid " src="image/full_layout_draw.png" style="margin-top: 30px;" loading="lazy">
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -163,7 +165,7 @@
                   </button>
                 </div>
                 <div class="modal-body bg-light text-justify">
-                    <img class="img-fluid modalimg" src="image/myblog.png">
+                    <img class="img-fluid modalimg" src="image/myblog.png" loading="lazy">
                     <p>This is a webpage built using Bootstrap 4 and Javascript. I always wanted to build my own webpage and the lockdown caused by Covid-19 has given me the chance to learn about web development and to create my very own website. The source code can be found on my github page.</p>
                 </div>
                 <div class="modal-footer">
@@ -199,14 +201,14 @@
                   </button>
                 </div>
                 <div class="modal-body bg-light text-justify">
-                    <img class="img-fluid modalimg" src="image/fyp.png">
+                    <img class="img-fluid modalimg" src="image/fyp.png" loading="lazy">
                     <p>This is my final year project at University of Southampton, under the supervision of Dr Klaus Peter Zauner. The aim of this project is to create a general off-road robotic platform based on Raspberry Pi 4 and Pixhawk 4 autopilot system that can be used for research purposes such as carrying payload/payloads. The final designed rover comes equiped with a Raspberry Pi 4 and a Pixhawk 4. The developed platform is capable of being controlled by an RC transmitter as well as by the on-board computer.  It also offers multiple sensing capabilities such as individual motor current sensing,  low  battery  voltage  sensing,  and temperature  sensing. One  key  aspect that makes this platform different from other commercially available robotic platform  is  the  design  of  the  payload  interface  which  makes  it  easy  for  the  user  to integrate  sensors  or  payloads  into  the  platform. </p>
-                    <img class="img-fluid " src="image/highlevelsystemoverview.png" style="margin-top: 30px;margin-bottom: 30px;">
+                    <img class="img-fluid " src="image/highlevelsystemoverview.png" style="margin-top: 30px;margin-bottom: 30px;" loading="lazy">
                     <p>This project involved the design and implementation of the entire hardware and software system architecture. The hardware itself is divided into two level, low-level hardware(pyboard) in which the control of the motor drivers and onboard sensors interfacing is done and high-level hardware (Raspberry Pi 4) in which the user can program. ROS Melodic is implemented on the Raspberry Pi 4 to faciliate the communication and data transfer between the Pyboard and the Pixhawk 4. A high level block diagram of the entire developed and implemented hardware system architecture is shown above and a more detailed version of it is shown below.</p>
-                    <img class="img-fluid " src="image/hardwareblockdiagram (5).png" style="margin-top: 30px; margin-bottom: 30px;">
-                    <img class="img-fluid " src="image/software_architecture.png" style="margin-top: 30px; margin-bottom: 30px;">
-                    <img class="img-fluid " src="image/electronic_box_1.jpg" style="margin-top: 30px; margin-bottom: 30px;">
-                    <img class="img-fluid " src="image/final_design_1.jpg" style="margin-top: 30px; margin-bottom: 30px;">
+                    <img class="img-fluid " src="image/hardwareblockdiagram (5).png" style="margin-top: 30px; margin-bottom: 30px;" loading="lazy">
+                    <img class="img-fluid " src="image/software_architecture.png" style="margin-top: 30px; margin-bottom: 30px;" loading="lazy">
+                    <img class="img-fluid " src="image/electronic_box_1.jpg" style="margin-top: 30px; margin-bottom: 30px;" loading="lazy">
+                    <img class="img-fluid " src="image/final_design_1.jpg" style="margin-top: 30px; margin-bottom: 30px;" loading="lazy">
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -241,9 +243,9 @@
                   </button>
                 </div>
                 <div class="modal-body bg-light text-justify">
-                    <img class="img-fluid modalimg" src="image/fmcwradar.png">
+                    <img class="img-fluid modalimg" src="image/fmcwradar.png" loading="lazy">
                     <p>The aim of this project is to discover the working principle of a FMCW radar and design the transmitter and receiver of the system. This project is solely based on simulation and is done using LTSpice. The designed system architecture is shown in the image above.</p>
-                    <img class="img-fluid " src="image/full_demodulator_cir.PNG" style="margin-top: 30px; margin-bottom: 30px;">
+                    <img class="img-fluid " src="image/full_demodulator_cir.PNG" style="margin-top: 30px; margin-bottom: 30px;" loading="lazy">
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
