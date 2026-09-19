@@ -8,6 +8,7 @@ import { getSortedPosts } from "@/utils/getSortedPosts";
 import { getPostUrl } from "@/utils/getPostPaths";
 import { slugifyStr } from "@/utils/slugify";
 import config from "@/config";
+import BookRating from "@/components/BookRating.astro";
 
 const locale = Astro.currentLocale ?? config.site.lang;
 const dateFormat = new Intl.DateTimeFormat("en-GB", {
@@ -77,9 +78,7 @@ const books = getSortedPosts(await getCollection("posts"))
                     ) : book.status === "reading" ? (
                       <span class="status reading">reading</span>
                     ) : book.rating !== undefined ? (
-                      <span class="rating" aria-label={"Rated " + book.rating + " out of 10"}>
-                        {book.rating}/10
-                      </span>
+                    <BookRating rating={book.rating} />
                     ) : null}
                   </div>
                   <p class="metadata">
