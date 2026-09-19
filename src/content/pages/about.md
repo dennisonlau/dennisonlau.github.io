@@ -1,37 +1,42 @@
 ---
 title: "About"
-description: "A bit about me and this blog."
+description: "A little about me and why I write."
 ---
 
-AstroPaper is a minimal, accessible and SEO-friendly blog theme built with [Astro](https://astro.build/) and [Tailwind CSS](https://tailwindcss.com/).
+<img
+  class="about-portrait"
+  src="/images/dennison.jpg"
+  alt="Dennison Lau smiling outdoors"
+  width="190"
+  height="238"
+/>
 
-![Astro Paper](@/assets/images/astropaper-og.jpg)
+**Hi, I'm Dennison.**
 
-AstroPaper provides a solid foundation for blogs, or even portfolios\_ with full markdown support, built-in dark mode, and a clean layout that works out-of-the-box.
+Digital systems engineer · Cambridge, UK
 
-The blog posts in this theme also serve as guides, docs or example articles\_ making AstroPaper a flexible starting point for your next content-driven site.
+I work on digital systems. Away from work, I read about technology,
+investing, and how people think.
 
-## Features
+This site is where I slow down and work through those ideas. I write
+to understand what I've read, question my assumptions, and explain
+myself more clearly.
 
-AstroPaper comes with a set of useful features that make content publishing easy and effective:
+[GitHub ↗](https://github.com/dennisonlau) · [LinkedIn ↗](YOUR_LINKEDIN_PROFILE_URL)
 
-- SEO-friendly
-- Fast performance
-- Light & dark mode
-- Highly customizable
-- Organizable blog posts
-- Responsive & accessible
-- Static search with [PageFind](https://pagefind.app/)
-- Automatic social image generation
+## What you'll find here
 
-and so much more.
+My [Bookshelf](/bookshelf/) collects notes on the books I read:
+what stayed with me, what changed my mind, and where I disagree.
+[Essays](/essays/) is for other questions and reflections along the way.
 
-## Show your support
+These are thoughts in progress. If an idea resonates with you,
+I'd be glad to hear your perspective.
 
-If you like [AstroPaper](https://github.com/satnaing/astro-paper), consider giving it a star ⭐️.
+## Education
 
-Found a bug 🐛 or have an improvement ✨ in mind? Feel free to open an [issue](https://github.com/satnaing/astro-paper/issues), submit a [pull request](https://github.com/satnaing/astro-paper/pulls) or start a [discussion](https://github.com/satnaing/astro-paper/discussions).
+**Imperial College London · 2020–2021**  
+MSc Analogue and Digital Integrated Circuit Design — Distinction
 
-If you find this theme helpful, you can also [sponsor me on GitHub](https://github.com/sponsors/satnaing) or [buy me a coffee](https://buymeacoffee.com/satnaing) to show your support — every penny counts.
-
-Kyay zuu! 🙏🏼
+**University of Southampton · 2017–2020**  
+BEng Electrical and Electronic Engineering — First Class
