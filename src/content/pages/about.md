@@ -1,5 +1,5 @@
 ---
-title: "Hi, I'm Dennison."
+title: "Hey, I'm Dennison."
 description: "Digital systems engineer in Cambridge, writing about books, technology, and how people think."
 ---
 
@@ -43,9 +43,7 @@ you—or you see it differently—I'd enjoy hearing your perspective.
 ## Education
 
 **Imperial College London**  
-MSc Analogue and Digital Integrated Circuit Design  
-2020–2021 · Distinction
+MSc Analogue and Digital Integrated Circuit Design
 
 **University of Southampton**  
-BEng Electrical and Electronic Engineering  
-2017–2020 · First Class
+BEng Electrical and Electronic Engineering
