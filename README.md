@@ -1,166 +1,157 @@
-# AstroPaper 📄
+# Dennison Lau
 
-![AstroPaper](public/default-og.jpg)
-[![Figma](https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white)](https://www.figma.com/community/file/1356898632249991861)
-![Typescript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
-![GitHub](https://img.shields.io/github/license/satnaing/astro-paper?color=%232F3741&style=for-the-badge)
-[![Conventional Commits](https://img.shields.io/badge/Conventional%20Commits-1.0.0-%23FE5196?logo=conventionalcommits&logoColor=white&style=for-the-badge)](https://conventionalcommits.org)
-[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg?style=for-the-badge)](http://commitizen.github.io/cz-cli/)
+My personal website: [dennisonlau.github.io](https://dennisonlau.github.io/).
 
-AstroPaper is a minimal, responsive, accessible and SEO-friendly Astro blog theme. This theme is designed and crafted based on [my personal blog](https://satnaing.dev/blog).
+I’m a digital systems engineer based in Cambridge, UK. This site is where I write about books, technology, investing, and how people think.
 
-Read [the blog posts](https://astro-paper.pages.dev/posts/) or check [the README Documentation Section](#-documentation) for more info.
+I write to understand what I’ve read, question my assumptions, and express my thoughts more clearly.
 
-## 🔥 Features
+## Explore
 
-- [x] type-safe markdown
-- [x] super fast performance
-- [x] accessible (Keyboard/VoiceOver)
-- [x] responsive (mobile ~ desktops)
-- [x] SEO-friendly
-- [x] light & dark mode
-- [x] static search ([Pagefind](https://pagefind.app/))
-- [x] draft posts & pagination
-- [x] sitemap & rss feed
-- [x] MDX support
-- [x] collapsible table of contents
-- [x] followed best practices
-- [x] highly customizable
-- [x] dynamic OG image generation for blog posts ([Blog Post](https://astro-paper.pages.dev/posts/dynamic-og-image-generation-in-astropaper-blog-posts/))
-- [x] i18n ready
+- [Bookshelf](https://dennisonlau.github.io/bookshelf/) — book notes, personal ratings, and ideas that stayed with me.
+- [Essays](https://dennisonlau.github.io/essays/) — questions and reflections beyond the bookshelf.
+- [Tags](https://dennisonlau.github.io/tags/) — browse writing by topic.
+- [About](https://dennisonlau.github.io/about/) — my background and why I write.
 
-_Note: I've tested screen-reader accessibility of AstroPaper using **VoiceOver** on Mac and **TalkBack** on Android. I couldn't test all other screen-readers out there. However, accessibility enhancements in AstroPaper should be working fine on others as well._
+## Built with
 
-## ✅ Lighthouse Score
+- [Astro](https://astro.build/) and the [AstroPaper](https://github.com/satnaing/astro-paper) theme
+- Tailwind CSS
+- Markdown and MDX for content
+- Pagefind for search
+- GitHub Actions and GitHub Pages for building and hosting
 
-<p align="center">
-  <a href="https://pagespeed.web.dev/report?url=https%3A%2F%2Fastro-paper.pages.dev%2F&form_factor=desktop">
-    <img width="710" alt="AstroPaper Lighthouse Score" src="AstroPaper-lighthouse-score.svg">
-  </a>
-</p>
+Book covers can be retrieved by ISBN through Open Library, or supplied as local images.
 
-## 🚀 Project Structure
+## Add a book note
 
-Inside of AstroPaper, you'll see the following folders and files:
+Create a Markdown file inside `src/content/posts/`, for example `my-book-note.md`:
 
-```bash
-/
-├── public/
-│   ├── pagefind/          # auto-generated on build
-│   ├── favicon.svg
-│   └── default-og.jpg
-├── src/
-│   ├── assets/
-│   │   ├── icons/
-│   │   └── images/
-│   ├── components/
-│   ├── content/
-│   │   ├── pages/
-│   │   │   └── about.md
-│   │   └── posts/
-│   │       └── some-blog-posts.md
-│   ├── i18n/
-│   ├── layouts/
-│   ├── pages/
-│   ├── scripts/
-│   ├── styles/
-│   ├── types/
-│   ├── utils/
-│   ├── config.ts
-│   └── content.config.ts
-├── astro-paper.config.ts  # user-defined configurations
-└── astro.config.ts
-```
-
-All blog posts are stored in the `src/content/posts/` directory. You can organise posts into subdirectories — the subdirectory name becomes part of the post URL.
-
-## 📖 Documentation
-
-Documentation can be read in two formats\_ _markdown_ & _blog post_.
-
-- Configuration - [markdown](src/content/posts/how-to-configure-astropaper-theme.md) | [blog post](https://astro-paper.pages.dev/posts/how-to-configure-astropaper-theme/)
-- Add Posts - [markdown](src/content/posts/adding-new-post.md) | [blog post](https://astro-paper.pages.dev/posts/adding-new-posts-in-astropaper-theme/)
-- Customize Color Schemes - [markdown](src/content/posts/customizing-astropaper-theme-color-schemes.md) | [blog post](https://astro-paper.pages.dev/posts/customizing-astropaper-theme-color-schemes/)
-- Predefined Color Schemes - [markdown](src/content/posts/predefined-color-schemes.md) | [blog post](https://astro-paper.pages.dev/posts/predefined-color-schemes/)
-
-## 💻 Tech Stack
-
-**Main Framework** - [Astro](https://astro.build/)  
-**Type Checking** - [TypeScript](https://www.typescriptlang.org/)  
-**Styling** - [TailwindCSS](https://tailwindcss.com/)  
-**UI/UX** - [Figma Design File](https://www.figma.com/community/file/1356898632249991861)  
-**Static Search** - [Pagefind](https://pagefind.app/)  
-**Icons** - [Tablers](https://tabler-icons.io/)  
-**Code Formatting** - [Prettier](https://prettier.io/)  
-**Deployment** - [Cloudflare Pages](https://pages.cloudflare.com/)  
-**Linting** - [ESLint](https://eslint.org)  
-**Dynamic OG images** - [Satori](https://github.com/vercel/satori) + [Sharp](https://sharp.pixelplumbing.com/) + [Astro Fonts](https://docs.astro.build/en/guides/fonts/)
-
-## 👨🏻‍💻 Running Locally
-
-You can start using this project locally by running the following command in your desired directory:
-
-```bash
-# pnpm
-pnpm create astro@latest --template satnaing/astro-paper
-
-# npm
-npm create astro@latest -- --template satnaing/astro-paper
-
-# yarn
-yarn create astro --template satnaing/astro-paper
-
-# bun
-bun create astro@latest -- --template satnaing/astro-paper
-```
-
-Then start the project by running the following commands:
-
-```bash
-# install dependencies if you haven't done so in the previous step.
-pnpm install
-
-# start running the project
-pnpm dev
-```
-
-## Google Site Verification (optional)
-
-You can add your [Google Site Verification HTML tag](https://support.google.com/webmasters/answer/9008080#meta_tag_verification&zippy=%2Chtml-tag) by setting `site.googleVerification` in `astro-paper.config.ts`:
-
-```ts file="astro-paper.config.ts"
-export default defineAstroPaperConfig({
-  site: {
-    // ...
-    googleVerification: "your-google-site-verification-value",
-  },
-  // ...
-});
-```
-
-> See [this discussion](https://github.com/satnaing/astro-paper/discussions/334#discussioncomment-10139247) for adding AstroPaper to the Google Search Console.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command          | Action                                                                                                                           |
-| :--------------- | :------------------------------------------------------------------------------------------------------------------------------- |
-| `pnpm install`   | Installs dependencies                                                                                                            |
-| `pnpm dev`       | Starts local dev server at `localhost:4321`                                                                                      |
-| `pnpm build`     | Type-checks, builds the site, runs Pagefind indexing, and copies the index to `public/pagefind/`                                 |
-| `pnpm preview`   | Preview your build locally, before deploying                                                                                     |
-| `pnpm sync`      | Generates TypeScript types for all Astro modules. [Learn more](https://docs.astro.build/en/reference/cli-reference/#astro-sync). |
-| `pnpm astro ...` | Run CLI commands like `astro add`, `astro check`                                                                                 |
-
-## ✨ Feedback & Suggestions
-
-If you have any suggestions/feedback, you can contact me via [my email](mailto:satnaingdev+astropaper@gmail.com). Alternatively, feel free to open an issue if you find bugs or want to request new features.
-
-## 📜 License
-
-Licensed under the MIT License, Copyright © 2026
-
+```markdown
+---
+title: "Book title — what stayed with me"
+description: "A short statement of my main takeaway."
+pubDatetime: 2026-09-19T12:00:00Z
+draft: true
+tags:
+  - book-notes
+  - technology
+book:
+  title: "Book title"
+  author: "Author name"
+  readDate: 2026-09-19
+  status: finished
+  rating: 8
 ---
 
-Made with 🤍 by [Sat Naing](https://satnaing.dev) 👨🏻‍💻 and [contributors](https://github.com/satnaing/astro-paper/graphs/contributors).
+## The idea that stayed with me
+
+Write here.
+
+## What I agree with—and what I question
+
+Write here.
+
+## What this changes for me
+
+Write here.
+
+## Questions I’m still thinking about
+
+Write here.
+```
+
+The `book` block places the post on the Bookshelf. The top-level `title` names the article; `book.title` names the book.
+
+Book metadata:
+
+| Field | Usage |
+| --- | --- |
+| `title` | Required book title |
+| `author` | Required book author |
+| `isbn` | Optional quoted ISBN-10 or ISBN-13 for cover lookup |
+| `readDate` | Optional reading date; the Bookshelf falls back to the publication date |
+| `status` | `finished`, `reading`, or `abandoned`; defaults to `finished` |
+| `rating` | Optional personal score from 0 to 10 |
+| `stoppedAtPage` | Optional page number for an abandoned book |
+| `cover` | Optional local cover path beginning with `/images/books/` |
+
+To look up a cover, add the book’s actual ISBN inside the `book` block:
+
+```yaml
+  isbn: "9780140328721"
+```
+
+Cover availability depends on Open Library’s catalogue.
+
+For a local cover, save the image at `public/images/books/my-book.jpg` and add:
+
+```yaml
+  cover: "/images/books/my-book.jpg"
+```
+
+A local cover takes priority over the ISBN lookup.
+
+## Add an essay
+
+Create another Markdown file inside `src/content/posts/`. Omit the `book` block to have it appear under Essays.
+
+```markdown
+---
+title: "A question I’m thinking about"
+description: "A short introduction to the question."
+pubDatetime: 2026-09-19T12:00:00Z
+draft: true
+tags:
+  - technology
+---
+
+Start writing here.
+```
+
+Tags come from each post’s frontmatter. Reuse consistent tag names to keep related writing together.
+
+## Publish
+
+1. Finish the Markdown file and update its publication date.
+2. Change `draft: true` to `draft: false`.
+3. Preview locally and run `pnpm build`.
+4. Commit the content and any accompanying images.
+5. Push to `main`.
+
+For example:
+
+```bash
+git add src/content/posts/my-book-note.md
+git commit -m "Add new book note"
+git push origin main
+```
+
+If you added a local cover, stage that image too.
+
+Every push to `main` triggers the **Publish website** GitHub Actions workflow. Once the build and deployment succeed, GitHub Pages serves the updated site.
+
+Future-dated posts may require another build after their publication time; the site does not rebuild simply because time has passed.
+
+## Files to know
+
+| Path | Purpose |
+| --- | --- |
+| `src/content/posts/` | Book notes and essays |
+| `src/content/pages/about.md` | About page content |
+| `src/content.config.ts` | Content fields and validation |
+| `src/pages/index.astro` | Homepage |
+| `src/pages/bookshelf.astro` | Bookshelf and sorting |
+| `src/pages/essays.astro` | Essays listing |
+| `src/components/Header.astro` | Site identity and navigation |
+| `src/components/Card.astro` | Shared writing cards |
+| `src/layouts/Layout.astro` | Shared document layout and favicon links |
+| `src/styles/global.css` | Global styling |
+| `public/images/` | Portrait and other static images |
+| `.github/workflows/deploy.yml` | Build and deployment workflow |
+
+## Credits
+
+Based on [AstroPaper](https://github.com/satnaing/astro-paper), customised for my personal writing and reading notes.
+
+Book cover lookup is provided by [Open Library](https://openlibrary.org/).
