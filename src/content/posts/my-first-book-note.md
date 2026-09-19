@@ -8,10 +8,10 @@ tags:
 book:
   title: "Book title"
   author: "Book author"
-  # Optional: isbn: "9781603580557" (replace with this book’s ISBN)
+  isbn: "97816680-53379"
   readDate: 2026-09-18
   status: finished
-  # Optional: rating: 8
+  rating: 8
   # Optional: cover: "/images/books/book-title.jpg"
 draft: false
 featured: false
