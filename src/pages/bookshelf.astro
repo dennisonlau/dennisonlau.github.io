@@ -1,0 +1,184 @@
+---
+import { getCollection } from "astro:content";
+import { getRelativeLocaleUrl } from "astro:i18n";
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+import { getSortedPosts } from "@/utils/getSortedPosts";
+import { getPostUrl } from "@/utils/getPostPaths";
+import { slugifyStr } from "@/utils/slugify";
+import config from "@/config";
+
+const locale = Astro.currentLocale ?? config.site.lang;
+const dateFormat = new Intl.DateTimeFormat("en-GB", {
+  month: "short",
+  year: "numeric",
+  timeZone: "UTC",
+});
+const coverFor = (book: { cover?: string; isbn?: string }) =>
+  book.cover ?? (book.isbn
+    ? "https://covers.openlibrary.org/b/isbn/" + book.isbn + "-M.jpg?default=false"
+    : undefined);
+
+const books = getSortedPosts(await getCollection("posts"))
+  .flatMap(post => {
+    const book = post.data.book;
+    return book ? [{ post, book, date: book.readDate ?? post.data.pubDatetime, cover: coverFor(book) }] : [];
+  })
+  .sort((a, b) => b.date.getTime() - a.date.getTime());
+---
+
+<Layout
+  title={"Bookshelf | " + config.site.title}
+  description="Book notes: what I thought, what changed my mind, and what I questioned."
+>
+  <Header />
+  <main id="main-content" class="app-layout shelf">
+    <h1>Bookshelf</h1>
+    <p class="intro">
+      Notes on {books.length} {books.length === 1 ? "book" : "books"}.
+      What I thought, what changed my mind, and where I think the author is wrong.
+    </p>
+
+    <div id="bookshelf">
+      <div id="bookshelf-sort" class="sort" role="group" aria-label="Sort books" hidden>
+        <span>Sort:</span>
+        <button type="button" data-sort="recent" aria-pressed="true">recent</button>
+        <span aria-hidden="true">·</span>
+        <button type="button" data-sort="rating" aria-pressed="false">rating</button>
+        <span aria-hidden="true">·</span>
+        <button type="button" data-sort="title" aria-pressed="false">title</button>
+      </div>
+      <p id="bookshelf-announcement" class="sr-only" aria-live="polite"></p>
+      {
+        books.length === 0 ? (
+          <p class="empty">My first book note is on its way.</p>
+        ) : (
+          <ul id="bookshelf-list">
+            {books.map(({ post, book, date, cover }) => (
+              <li
+                class="book-row"
+                data-title={book.title}
+                data-date={date.getTime()}
+                data-rating={book.status === "finished" ? (book.rating ?? -1) : -1}
+              >
+                <div class="cover" aria-hidden="true">
+                  {cover && (
+                    <img src={cover} alt="" width="88" height="128" loading="lazy" decoding="async" />
+                  )}
+                </div>
+                <div class="book-content">
+                  <div class="book-heading">
+                    <h2>
+                      <a href={getPostUrl(post.id, post.filePath, locale)}>{book.title}</a>
+                    </h2>
+                    {book.status === "abandoned" ? (
+                      <span class="status abandoned">abandoned</span>
+                    ) : book.status === "reading" ? (
+                      <span class="status reading">reading</span>
+                    ) : book.rating !== undefined ? (
+                      <span class="rating" aria-label={"Rated " + book.rating + " out of 10"}>
+                        {book.rating}/10
+                      </span>
+                    ) : null}
+                  </div>
+                  <p class="metadata">
+                    {book.author} · <time datetime={date.toISOString()}>{dateFormat.format(date)}</time>
+                    {book.status === "abandoned" && book.stoppedAtPage
+                      ? " · stopped at p." + book.stoppedAtPage
+                      : ""}
+                  </p>
+                  <p class="takeaway">{post.data.description}</p>
+                  <ul class="topics" aria-label="Topics">
+                    {post.data.tags.filter(tag => tag !== "book-notes").map(tag => (
+                      <li>
+                        <a href={getRelativeLocaleUrl(locale, "tags/" + slugifyStr(tag))}>{tag}</a>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </li>
+            ))}
+          </ul>
+        )
+      }
+    </div>
+  </main>
+  <Footer />
+</Layout>
+
+<style>
+  .shelf { padding-block: 1.5rem 3rem; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+  h1 { font-size: 1.5rem; font-weight: 650; margin-bottom: .35rem; }
+  .intro, .metadata, .rating, .sort { color: color-mix(in srgb, var(--foreground) 72%, var(--background)); }
+  .intro { line-height: 1.6; }
+  .sort { margin-block: .7rem 1rem; font-size: .9rem; }
+  .sort button { cursor: pointer; padding: .2rem; }
+  .sort button[aria-pressed="true"] { color: var(--foreground); text-decoration: underline; text-underline-offset: .25rem; }
+  .sort button:focus-visible, a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+  #bookshelf-list, .topics { list-style: none; padding: 0; }
+  #bookshelf-list { margin-top: 1rem; }
+  .book-row { display: grid; grid-template-columns: 44px minmax(0, 1fr); gap: 1rem; border-top: 1px solid var(--border); padding-block: 1rem; }
+  .cover { width: 44px; height: 64px; border-radius: 3px; background: color-mix(in srgb, var(--accent) 20%, var(--background)); overflow: hidden; }
+  .book-row:nth-child(3n + 2) .cover { background: color-mix(in srgb, #a78bfa 25%, var(--background)); }
+  .book-row:nth-child(3n) .cover { background: color-mix(in srgb, #86b880 25%, var(--background)); }
+  .cover img { width: 100%; height: 100%; object-fit: cover; }
+  .book-heading { display: flex; align-items: baseline; justify-content: space-between; gap: .75rem; }
+  h2 { font-size: 1rem; font-weight: 650; line-height: 1.4; }
+  h2 a:hover { text-decoration: underline; text-underline-offset: .2rem; }
+  .rating { font-size: .85rem; white-space: nowrap; }
+  .metadata { margin-top: .15rem; font-size: .85rem; }
+  .takeaway { margin-top: .5rem; line-height: 1.65; }
+  .topics { display: flex; flex-wrap: wrap; gap: .35rem; margin-top: .5rem; font-size: .8rem; }
+  .topics a { display: block; border-radius: 999px; padding: .1rem .55rem; background: color-mix(in srgb, var(--foreground) 5%, var(--background)); }
+  .status { border-radius: 999px; padding: .1rem .55rem; font-size: .75rem; white-space: nowrap; }
+  .abandoned { background: #ffdf9b; color: #633d00; }
+  .reading { background: #dceaff; color: #23436d; }
+  .empty { margin-block: 2rem; }
+  @media (max-width: 420px) {
+    .book-row { grid-template-columns: 36px minmax(0, 1fr); gap: .75rem; }
+    .cover { width: 36px; height: 54px; }
+    .book-heading { flex-wrap: wrap; gap: .2rem .5rem; }
+  }
+</style>
+
+<script>
+  function initialiseBookshelf() {
+    const root = document.querySelector<HTMLElement>("#bookshelf");
+    const list = root?.querySelector<HTMLElement>("#bookshelf-list");
+    const controls = root?.querySelector<HTMLElement>("#bookshelf-sort");
+    if (!root || !list || !controls || root.dataset.ready === "true") return;
+
+    root.dataset.ready = "true";
+    root.querySelectorAll<HTMLImageElement>(".cover img").forEach(img => {
+      const showPlaceholder = () => { img.style.visibility = "hidden"; };
+      img.addEventListener("error", showPlaceholder, { once: true });
+      if (img.complete && img.naturalWidth === 0) showPlaceholder();
+    });
+    controls.hidden = false;
+    const buttons = Array.from(controls.querySelectorAll<HTMLButtonElement>("button[data-sort]"));
+    const announcement = root.querySelector<HTMLElement>("#bookshelf-announcement");
+
+    buttons.forEach(button => {
+      button.addEventListener("click", () => {
+        const mode = button.dataset.sort;
+        const rows = Array.from(list.querySelectorAll<HTMLElement>(".book-row"));
+        const byTitle = (a: HTMLElement, b: HTMLElement) =>
+          (a.dataset.title ?? "").localeCompare(b.dataset.title ?? "", "en", { sensitivity: "base" });
+
+        rows.sort((a, b) => {
+          if (mode === "title") return byTitle(a, b);
+          const key = mode === "rating" ? "rating" : "date";
+          return Number(b.dataset[key]) - Number(a.dataset[key]) || byTitle(a, b);
+        });
+
+        list.append(...rows);
+        buttons.forEach(other => other.setAttribute("aria-pressed", String(other === button)));
+        if (announcement) announcement.textContent = "Books sorted by " + mode + ".";
+      });
+    });
+  }
+
+  initialiseBookshelf();
+  document.addEventListener("astro:page-load", initialiseBookshelf);
+</script>
