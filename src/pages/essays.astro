@@ -1,0 +1,26 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "@/layouts/Layout.astro";
+import Header from "@/components/Header.astro";
+import Footer from "@/components/Footer.astro";
+import Card from "@/components/Card.astro";
+import { getSortedPosts } from "@/utils/getSortedPosts";
+import config from "@/config";
+
+const essays = getSortedPosts(await getCollection("posts"))
+  .filter(post => !post.data.book);
+---
+
+<Layout title={"Essays | " + config.site.title} description="Notes, questions, and reflections beyond the bookshelf.">
+  <Header />
+  <main id="main-content" class="app-layout py-8">
+    <h1 class="mb-3 text-2xl font-semibold">Essays</h1>
+    <p>Notes, questions, and reflections beyond the bookshelf.</p>
+    {essays.length > 0 ? (
+      <ul>{essays.map(post => <Card {...post} />)}</ul>
+    ) : (
+      <p class="mt-8">My first essay is on its way.</p>
+    )}
+  </main>
+  <Footer />
+</Layout>
