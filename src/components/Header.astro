@@ -48,12 +48,55 @@ const isActive = (path: string) => {
   <div
     class="border-border bg-background relative flex w-full items-baseline justify-between border-b py-4 sm:items-center sm:py-6"
   >
-    <a
-      href={getRelativeLocaleUrl(locale, "")}
-      class="absolute py-1 text-xl leading-8 font-semibold whitespace-nowrap sm:static sm:my-auto sm:text-2xl sm:leading-none"
-    >
-      {site.title}
-    </a>
+<a
+  href={getRelativeLocaleUrl(locale, "")}
+  class="absolute inline-flex items-center gap-2.5 py-1 text-xl leading-8 font-semibold whitespace-nowrap sm:static sm:my-auto sm:text-2xl sm:leading-none"
+>
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    viewBox="0 0 32 32"
+    width="28"
+    height="28"
+    fill="none"
+    stroke="currentColor"
+    stroke-width="1.25"
+    aria-hidden="true"
+    focusable="false"
+    class="shrink-0"
+  >
+    <!-- Wafer outline with an orientation notch at the bottom -->
+    <path
+      d="M14 29.85
+         A14 14 0 1 1 18 29.85
+         L16 27.5 Z"
+      stroke-linejoin="round"
+    />
+
+    <!-- Die grid, inset from the wafer edge -->
+    <path
+      d="M9 5.8V26.2
+         M16 4V25
+         M23 5.8V26.2
+         M5.8 9H26.2
+         M4 16H28
+         M5.8 23H26.2"
+      opacity="0.55"
+    />
+
+    <!-- One highlighted die -->
+    <rect
+      x="16"
+      y="9"
+      width="7"
+      height="7"
+      fill="currentColor"
+      fill-opacity="0.14"
+      stroke="none"
+    />
+  </svg>
+
+  <span>{site.title}</span>
+</a>
     <nav
       id="nav-menu"
       class="flex w-full flex-col items-center sm:ms-2 sm:flex-row sm:justify-end sm:space-x-4 sm:py-0"
