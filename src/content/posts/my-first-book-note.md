@@ -1,6 +1,6 @@
 ---
 title: "Apple In China — Patrick Mcgee"
-# description: "The capture of the world's greatest company"
+description: ""
 pubDatetime: 2026-09-18T00:00:00Z
 tags:
   - book-notes
