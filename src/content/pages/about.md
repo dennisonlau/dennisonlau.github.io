@@ -3,10 +3,6 @@ title: "Hey, I'm Dennison."
 description: "Digital systems engineer in Cambridge, writing about books, technology, and how people think."
 ---
 
-I design low-power ASICs. My work involves thinking about how different parts of a system fit together, and the trade-offs that shape the whole.
-
-Away from work, I read about technology, investing, and how people think. This site is where I take those ideas a little further.
-
 ## Why I write
 
 Finishing a book is one thing. Explaining what I think about it takes more work.
