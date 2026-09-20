@@ -24,24 +24,38 @@ const { Content } = await render(about);
 
   <main id="main-content" class="app-layout about-page">
     <div class="about-shell">
-      <div class="about-profile">
-        <div>
-          <h1>{about.data.title}</h1>
+<div class="about-profile">
+  <div>
+    <h1>{about.data.title}</h1>
 
-          <p class="about-role">
-            Digital systems engineer
-            <span>Qualcomm · Cambridge, UK</span>
-          </p>
-        </div>
+    <p class="about-role">
+      Digital systems engineer
+      <span>Qualcomm · Cambridge, UK</span>
+    </p>
 
-        <img
-          class="about-portrait"
-          src="/images/dennison_main.jpg"
-          alt="Portrait of Dennison Lau"
-          width="128"
-          height="160"
-        />
-      </div>
+    <div class="about-intro">
+      <p>
+        I design low-power ASICs. My work involves thinking about how
+        different parts of a system fit together, and the trade-offs
+        that shape the whole.
+      </p>
+
+      <p>
+        Away from work, I read about technology, investing, and how
+        people think. This site is where I take those ideas a little
+        further.
+      </p>
+    </div>
+  </div>
+
+  <img
+    class="about-portrait"
+    src="/images/dennison_main.jpg"
+    alt="Portrait of Dennison Lau"
+    width="200"
+    height="250"
+  />
+</div>
 
       <div class="app-prose about-copy">
         <Content />
