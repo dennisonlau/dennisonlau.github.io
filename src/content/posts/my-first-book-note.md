@@ -1,13 +1,15 @@
 ---
-title: "Book title — what stayed with me"
-description: "The main question or idea explored in this note."
+title: "Apple In China — Patrick Mcgee"
+description: "The capture of the world's greatest company"
 pubDatetime: 2026-09-18T00:00:00Z
 tags:
   - book-notes
-  - learning
+  - Apple
+  - China
+  - Business
 book:
-  title: "Book title"
-  author: "Book author"
+  title: "Apple in China"
+  author: "Patrick Mcgee"
   isbn: "97816680-53379"
   readDate: 2026-09-18
   status: finished
