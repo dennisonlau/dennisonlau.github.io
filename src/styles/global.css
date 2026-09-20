@@ -53,10 +53,10 @@
 /* Greeting and portrait have their own row */
 .about-profile {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 128px;
-  align-items: center;
+  grid-template-columns: minmax(0, 1fr) 200px;
+  align-items: start;
   gap: 2rem;
-  margin-bottom: 2.25rem;
+  margin-bottom: 0;
 }
 
 .about-profile h1 {
@@ -82,12 +82,28 @@
 .about-profile .about-portrait {
   display: block;
   float: none;
-  width: 128px;
-  height: 160px;
-  margin: 0;
+  width: 200px;
+  height: 250px;
+  align-self: end;
+  margin: 0 0 1.8rem;
   border-radius: 10px;
   object-fit: cover;
   object-position: 59% 45%;
+}
+
+.about-intro {
+  margin-top: 1.5rem;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+.about-intro p {
+  margin: 0 0 1.25rem;
+  text-wrap: pretty;
+}
+
+.about-intro p:last-child {
+  margin-bottom: 0;
 }
 
 /* Every paragraph shares the same reading width */
@@ -128,7 +144,7 @@
   margin-bottom: 0;
 }
 
-@media (max-width: 540px) {
+@media (max-width: 640px) {
   .about-page {
     padding-top: 2rem;
   }
@@ -136,12 +152,14 @@
   .about-profile {
     grid-template-columns: 1fr;
     gap: 1.25rem;
-    margin-bottom: 1.75rem;
+    margin-bottom: 0;
   }
 
   .about-profile .about-portrait {
     grid-row: 1;
-    width: 104px;
-    height: 130px;
+    width: 144px;
+    height: 180px;
+    margin: 0;
+    align-self: start;
   }
 }
