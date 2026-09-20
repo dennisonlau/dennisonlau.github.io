@@ -1,5 +1,5 @@
 ---
-title: "Apple In China — Patrick Mcgee"
+title: "Apple In China"
 description: ""
 pubDatetime: 2026-09-18T00:00:00Z
 tags:
